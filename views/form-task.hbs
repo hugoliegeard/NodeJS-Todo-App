@@ -1,0 +1,30 @@
+<h1 class="text-center my-4">Ajouter une tâche</h1>
+
+<form method="post">
+
+    <div class="form-group">
+        <label>Nom de votre tâche</label>
+        <input name="title" placeholder="Saisissez une tâche." type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label>Description de votre tâche...</label>
+        <textarea name="description" cols="30" rows="10"
+                  placeholder="Saisissez une description."
+                  class="form-control"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label>Date d'échéance</label>
+        <input name="duedate" type="date" class="form-control">
+    </div>
+
+    <button class="btn btn-block btn-dark">
+        Ajouter la tâche
+    </button>
+
+</form>
+
+<hr>
+
+<a class="btn btn-block btn-outline-dark" href="/">Revenir aux tâches</a>

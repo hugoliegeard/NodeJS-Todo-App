@@ -1,0 +1,27 @@
+<h1 class="text-center my-4">{{pageTitle}}</h1>
+
+{{>nav}}
+
+<hr>
+
+{{#if tasks}}
+    {{#each tasks}}
+        <div class="card shadow-sm mt-2">
+            <div class="card-body">
+                <h5 class="card-title">{{title}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted"><small>{{duedate}}</small></h6>
+                <p class="card-text">{{description}}</p>
+                {{#if status}}
+                    <a href="/tasks/{{_id}}/delete" class="card-link text-danger float-right">Supprimer</a>
+                {{else}}
+                    <a href="/tasks/{{_id}}/done" class="card-link text-danger float-right">Marquer comme terminé</a>
+                {{/if}}
+            </div>
+        </div>
+    {{/each}}
+{{else}}
+    <div class="alert alert-info text-center">
+        Pas de tâches.
+    </div>
+{{/if}}
+
